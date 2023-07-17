@@ -92,10 +92,19 @@ repositories {
             includeGroup 'curse.maven'
         }
     }
+    maven {
+        name 'Modrinth'
+        url 'https://api.modrinth.com/maven'
+    }
     mavenLocal() // Must be last for caching to work
 }
 
 dependencies {
+    implementation rfg.deobf('maven.modrinth:gregtech-ce-unofficial:2.7.1-beta')
+    implementation rfg.deobf('maven.modrinth:gregicality-multiblocks:1.2.4')
+
+    runtimeOnly 'curse.maven:code-chicken-lib-1-8-242818:2779848'
+
     if (project.use_assetmover.toBoolean()) {
         implementation 'com.cleanroommc:assetmover:2.5'
     }
@@ -104,7 +113,7 @@ dependencies {
     }
 
     // Example of deobfuscating a dependency
-    // implementation rfg.deobf('curse.maven:had-enough-items-557549:4543375')
+    implementation rfg.deobf('curse.maven:had-enough-items-557549:4543375')
 
     if (project.use_mixins.toBoolean()) {
         // Change your mixin refmap name here:
@@ -119,6 +128,8 @@ dependencies {
             transitive = false
         }
     }
+
+
 
 }
 

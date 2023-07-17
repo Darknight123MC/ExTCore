@@ -1,13 +1,13 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "extcore",
+  "name": "Exoplanets Traveler Core",
+  "description": "A mod for modpack.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["CleanroomMC"],
+  "authorList": ["Exoplanets Travelers"],
   "credits": "Authors of this project",
   "logoFile": "",
   "screenshots": [],
